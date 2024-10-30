@@ -1,0 +1,162 @@
+$primary-color: #2D4595;
+$primary-subtle: #8395DD;
+$secondary-color: #AFA2FF;
+$neutral-900: #0B0824;
+$neutral-600: #5D5A67; /*kolla om den används*/
+$neutral-500: #B0ADBA; /*kolla om den används*/
+$neutral-200: #E2E0E8; /*kolla namnen -500 osv om de stämmer*/
+$neutral-100: #F8F8F8;
+$h1-fontsize: 3rem;
+$h2-fontsize: 2.5rem;
+$p-fontsize: 1rem;
+/*lägg till p här sen*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden; /*förhindrar horisontell scrollning*/
+}
+
+body {
+    background-image: linear-gradient(90deg, $primary-color, $primary-subtle, $primary-subtle, $primary-color);
+    margin: 0;
+    font-family: 'Poppins';
+    color: $neutral-900;
+}
+
+header {
+    display: flex; /*kanske inte behövs*/
+    justify-content: space-between; /*kanske inte behövs*/
+    background-color: $neutral-100;
+    padding: 1.5rem;
+    opacity: 50%;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+a { 
+    color: $neutral-900;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: $h1-fontsize;
+}
+
+h2 {
+    font-size: $h2-fontsize;
+    justify-content: center;
+}
+
+p {
+    font-size: $p-fontsize;
+    margin: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 900px) {
+    body {
+        margin: auto;
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+
+        #portfolio {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        nav {
+            padding-top: 0.5rem;
+        }
+    }
+
+    h1 {
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 15rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+        margin-bottom: 30%;
+        padding-top: 8rem;
+
+        .contact-option {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        }
+
+    table {
+        border-spacing: 20px;
+        color: $neutral-900;
+
+        thead {
+            font-weight: bold;
+        }
+        
+        thead td {
+            padding-top: 2%;
+            border-radius: 2%;
+            border: 1px solid $neutral-900;
+            padding: 0.8rem;
+            background-image: linear-gradient(180deg, $primary-subtle,  $neutral-200, $primary-subtle)
+        }
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        padding: 20px;
+        height: 20px;
+        width: 170px;
+        background-image: linear-gradient(180deg, $secondary-color, $secondary-color, $primary-color);
+        border: 1px solid $neutral-900;
+        border-radius: 5px;
+        font-family: 'Poppins';
+        font-weight: bold;
+        font-size: $p-fontsize;
+
+        /* button:hover {
+            background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+        }
+        lägg till hover på desktop*/
+    }
+
+    
+
+    
+
+}

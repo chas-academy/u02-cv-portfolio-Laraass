@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/*kolla om den används*/
+/*kolla om den används*/
+/*kolla namnen -500 osv om de stämmer*/
+/*lägg till p här sen*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden; /*förhindrar horisontell scrollning*/
+}
+
+body {
+  background-image: linear-gradient(90deg, #2D4595, #8395DD, #8395DD, #2D4595);
+  margin: 0;
+  font-family: "Poppins";
+  color: #0B0824;
+}
+
+header {
+  display: flex; /*kanske inte behövs*/
+  justify-content: space-between; /*kanske inte behövs*/
+  background-color: #F8F8F8;
+  padding: 1.5rem;
+  opacity: 50%;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+a {
+  color: #0B0824;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  justify-content: center;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: auto;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+  }
+  header #portfolio {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  header nav {
+    padding-top: 0.5rem;
+  }
+  h1 {
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 15rem;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    margin-bottom: 30%;
+    padding-top: 8rem;
+  }
+  section .contact-option {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  table {
+    border-spacing: 20px;
+    color: #0B0824;
+  }
+  table thead {
+    font-weight: bold;
+  }
+  table thead td {
+    padding-top: 2%;
+    border-radius: 2%;
+    border: 1px solid #0B0824;
+    padding: 0.8rem;
+    background-image: linear-gradient(180deg, #8395DD, #E2E0E8, #8395DD);
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    height: 20px;
+    width: 170px;
+    background-image: linear-gradient(180deg, #AFA2FF, #AFA2FF, #2D4595);
+    border: 1px solid #0B0824;
+    border-radius: 5px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+    /* button:hover {
+        background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+    }
+    lägg till hover på desktop*/
+  }
+}/*# sourceMappingURL=style.css.map */
