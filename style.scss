@@ -26,19 +26,10 @@ body {
     margin: 0;
     font-family: 'Poppins';
     color: $neutral-900;
+    margin: auto;
+    overflow-x: hidden;
+    text-align: center;
 }
-
-header {
-    display: flex; /*kanske inte behövs*/
-    justify-content: space-between; /*kanske inte behövs*/
-    background-color: $neutral-100;
-    padding: 1.5rem;
-    opacity: 50%;
-    position: fixed;
-    left: 0;
-    right: 0;
-}
-
 a { 
     color: $neutral-900;
     margin: 0 10px;
@@ -47,116 +38,160 @@ a {
 
 h1 {
     font-size: $h1-fontsize;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
     font-size: $h2-fontsize;
     justify-content: center;
 }
-
 p {
     font-size: $p-fontsize;
-    margin: 10px;
+    margin: 0.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: $neutral-100;
+    padding: 1.5rem;
+    opacity: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    #portfolio {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    nav {
+        padding-top: 0.5rem;
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 15rem;
+    animation: fade 2s linear;
+    animation-timeline: inherit;
 }
 
 section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    margin-bottom: 30%;
+    padding-top: 8rem;
+
+    .contact-option {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+img {
+    display: flex;
     justify-content: center;
 }
 
+table {
+    border-spacing: 20px;
+    color: $neutral-900;
 
-@media (max-width: 900px) {
-    body {
-        margin: auto;
-        overflow-x: hidden;
-        text-align: center;
+    thead {
+        font-weight: bold;
     }
+        
+    thead td {
+        padding-top: 2%;
+        border-radius: 2%;
+        border: 1px solid $neutral-900;
+        padding: 0.8rem;
+        background-image: linear-gradient(180deg, $primary-subtle,  $neutral-200, $primary-subtle)
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    height: 20px;
+    width: 170px;
+    background-image: linear-gradient(180deg, $secondary-color, $secondary-color, $primary-color);
+    border: 1px solid $neutral-900;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: $p-fontsize;
+}
+
+@keyframes fade {
+    from  {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Desktop version*/
+@media (min-width: 900px) {
 
     header {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-
-        #portfolio {
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
-
-        nav {
-            padding-top: 0.5rem;
-        }
+        flex-direction: row;
     }
-
+    
     h1 {
-        margin-top: 10rem;
-        margin-bottom: 1rem;
+        justify-content: center;
     }
 
     main {
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-bottom: 15rem;
+        justify-content: center;
+        margin: 20px auto;
+        width: 800px;
+        height: 600px;
+        /*lägga till någon bakgrundsbild?? ser för tomt ut*/
     }
 
     section {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        margin: 2%;
-        margin-bottom: 30%;
-        padding-top: 8rem;
+        margin: 100px auto;
+        padding: 100px;
+        width: 800px;
+        height: 900px;
 
+        table {
+            border-spacing: 40px;
+        }
         .contact-option {
-            margin-top: 2.5rem;
+            margin-top: 5rem;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        }
-
-    table {
-        border-spacing: 20px;
-        color: $neutral-900;
-
-        thead {
-            font-weight: bold;
-        }
-        
-        thead td {
-            padding-top: 2%;
-            border-radius: 2%;
-            border: 1px solid $neutral-900;
-            padding: 0.8rem;
-            background-image: linear-gradient(180deg, $primary-subtle,  $neutral-200, $primary-subtle)
-        }
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 40px;
     }
-
+    
     .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        padding: 20px;
-        height: 20px;
-        width: 170px;
-        background-image: linear-gradient(180deg, $secondary-color, $secondary-color, $primary-color);
-        border: 1px solid $neutral-900;
-        border-radius: 5px;
-        font-family: 'Poppins';
-        font-weight: bold;
-        font-size: $p-fontsize;
-
-        /* button:hover {
-            background-image: linear-gradient(180deg, $secondary-color, $primary-color);
-        }
-        lägg till hover på desktop*/
+        margin-top: 5rem;
     }
-
     
-
-    
-
+    .button:hover {
+        background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+    }
+}
 }
